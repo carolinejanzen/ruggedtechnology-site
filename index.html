@@ -3,281 +3,290 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rugged Technology | Legal Technology Built by a Lawyer, for Lawyers</title>
+<title>Rugged Technology | Built by a Lawyer, for Lawyers</title>
 <meta name="description" content="Your firm does not live in the cloud. It lives on hardware you control. $499 a seat a month, unlimited everything. Built inside a working law firm.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sanchez&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sage:#858f7b; --sage-dk:#5e6359; --copper:#a36645; --maroon:#331611; --maroon-2:#4a1f19;
-  --teal:#88a8a3; --teal-lt:#97b7b2; --navy:#2f4968; --paper:#ffffff; --ink:#313131; --mist:#f4f3ef; --line:#dddede;
+  --bg:#09090b; --bg2:#18181b; --line:#3f3f46; --ink:#f4f4f5; --soft:#d4d4d8; --mute:#a1a1aa; --dim:#71717a;
+  --violet:#8b5cf6; --green:#059669; --green-hi:#10b981;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "Open Sans",Arial,sans-serif}
-h1,h2,h3,.slab{font-family:Sanchez,Georgia,serif;font-weight:400;line-height:1.15;margin:0}
-a{color:var(--navy)}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:radial-gradient(1200px 600px at 15% -10%,rgba(139,92,246,.18),transparent 60%),radial-gradient(900px 500px at 110% 10%,rgba(16,185,129,.10),transparent 60%),var(--bg)}
+button{font:inherit;color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:22px 16px 48px}
 
-/* top bar + header + nav, the Rugged Law frame */
-.topbar{background:var(--sage);height:34px}
-.topbar .wrap{display:flex;justify-content:flex-end;align-items:center;height:34px}
-.pill{background:var(--teal-lt);color:#fff;font-size:12px;font-weight:700;padding:3px 14px;border-radius:20px;text-decoration:none}
-header.brand{background:#fff}
-header.brand .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px}
-.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.logo svg{flex:none}
-.logo .name{font-family:Sanchez,Georgia,serif;color:var(--navy);font-size:30px;letter-spacing:.14em;font-variant:small-caps;white-space:nowrap}
-.cta-r{text-align:right}
-.cta-r .big{font-family:Sanchez,Georgia,serif;color:var(--sage);font-size:26px;line-height:1.1}
-.cta-r .small{font-size:14px;color:var(--navy)}
-nav.bar{background:var(--copper)}
-nav.bar .wrap{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 26px;padding:9px 20px}
-nav.bar a{color:#fff;text-decoration:none;font-family:Sanchez,Georgia,serif;font-size:15px}
-nav.bar a:hover{text-decoration:underline}
+/* top line */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.mark{display:flex;align-items:center;gap:12px}
+.mark .sq{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#8b5cf6,#c026d3);box-shadow:0 0 18px rgba(168,85,247,.55);display:flex;align-items:center;justify-content:center;font-weight:800;letter-spacing:.02em}
+.mark .nm{font-size:20px;font-weight:700;letter-spacing:.01em}
+.mark .nm small{display:block;font-size:12px;font-weight:400;color:var(--mute);letter-spacing:0}
+.price-chip{font-size:14px;color:var(--soft);border:1px solid var(--line);background:rgba(39,39,42,.7);border-radius:999px;padding:7px 14px;white-space:nowrap}
+.price-chip b{color:#fff}
 
-/* hero */
-.hero{background:radial-gradient(ellipse at 30% 20%,#5a5a52 0%,#3d3a35 45%,#2a211d 100%);color:#fff;position:relative}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding:70px 20px 90px;align-items:center}
-.hero h1{font-size:50px}
-.hero h1 .tone{color:var(--teal-lt);display:block}
-.hero .rule{width:46px;height:6px;background:var(--copper);margin:26px 0 20px}
-.hero p.sub{font-size:18px;max-width:560px;color:#eee;margin:0 0 14px}
-.hero p.proof{font-family:Sanchez,Georgia,serif;font-size:20px;color:var(--teal-lt);margin:0}
-.formbox{position:relative;background:var(--maroon);padding:26px 24px 24px;border-left:6px solid var(--copper)}
-.formbox:after{content:"";position:absolute;left:-6px;bottom:-14px;width:70px;height:8px;background:var(--copper)}
-.formbox h2{font-size:22px;margin-bottom:6px}
-.formbox p.note{font-size:13px;color:#d9cfc9;margin:0 0 14px}
-.formbox label{display:block;font-size:12px;color:#d9cfc9;margin:10px 0 3px}
-.formbox input,.formbox select,.formbox textarea{width:100%;border:0;border-radius:0;padding:10px 11px;font:15px "Open Sans",Arial,sans-serif;color:var(--ink);background:#fff}
-.formbox textarea{min-height:76px;resize:vertical}
-.btn{display:inline-block;border:0;cursor:pointer;background:var(--sage);color:#fff;font:700 15px "Open Sans",Arial,sans-serif;padding:11px 26px;border-radius:24px;text-decoration:none;text-transform:uppercase;letter-spacing:.03em}
-.btn:hover{background:var(--sage-dk)}
-.formbox .btn{width:100%;margin-top:16px}
-.torn{height:46px;background:var(--maroon);clip-path:polygon(0 60%,6% 45%,13% 62%,21% 40%,30% 58%,38% 38%,47% 55%,55% 35%,64% 57%,72% 42%,81% 60%,89% 41%,95% 55%,100% 44%,100% 100%,0 100%);margin-top:-46px;position:relative}
+/* 1. the helper speaks */
+.helper{display:flex;align-items:flex-start;gap:12px}
+.avatar{flex:none;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#c026d3);box-shadow:0 0 18px rgba(168,85,247,.6);display:flex;align-items:center;justify-content:center;font-size:22px;user-select:none}
+.bubble{flex:1;border-radius:18px;border-top-left-radius:4px;background:linear-gradient(135deg,rgba(76,29,149,.6),var(--bg2));border:1px solid rgba(91,33,182,.6);padding:16px 18px;box-shadow:0 0 24px rgba(139,92,246,.18)}
+.bubble h1{margin:0 0 6px;font-size:26px;line-height:1.2;font-weight:700}
+.bubble p{margin:0;color:var(--soft)}
+.bubble .proof{margin-top:8px;color:#c4b5fd}
 
-/* dark section with step cards */
-.dark{background:var(--maroon);color:#fff}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:10px 0 60px}
-.step{background:var(--teal);text-align:center;padding:24px 18px}
-.step h3{color:#2b2b2b;font-size:24px;margin-bottom:8px}
-.step p{margin:0;color:#fff;font-size:15px}
-.dark h2.center{text-align:center;font-size:36px;padding:10px 0 12px}
-.dash{width:46px;height:6px;background:var(--sage);margin:12px auto 0}
-.rope{height:22px;background:repeating-linear-gradient(115deg,#c9a77c 0 9px,#a8845a 9px 13px,#d8bd96 13px 20px);box-shadow:inset 0 3px 4px rgba(0,0,0,.25),inset 0 -3px 4px rgba(0,0,0,.25)}
+/* the line */
+.line{display:flex;gap:8px;margin:16px 0 18px}
+.field{width:100%;font-size:16px;padding:12px 16px;border-radius:18px;background:rgba(9,9,11,.85);border:1px solid var(--line);color:var(--ink);outline:none;transition:all .15s}
+.field::placeholder{color:#52525b}
+.field:focus{border-color:var(--violet);box-shadow:0 0 16px rgba(139,92,246,.35)}
+.green{flex:none;font-size:16px;font-weight:600;padding:11px 22px;border:0;border-radius:999px;background:var(--green);color:#fff;cursor:pointer;
+  box-shadow:0 0 18px rgba(16,185,129,.45);transition:all .15s}
+.green:hover{background:var(--green-hi);box-shadow:0 0 26px rgba(16,185,129,.7)}
+.green:active{transform:scale(.95)}
+.quiet{font-size:14px;padding:8px 16px;border-radius:999px;background:rgba(39,39,42,.8);color:var(--soft);border:1px solid var(--line);cursor:pointer}
+.quiet:hover{background:#3f3f46}
 
-/* light sections */
-section.light{padding:64px 0}
-section.light.tint{background:var(--mist)}
-h2.sec{color:var(--sage);font-size:40px;text-align:center;margin-bottom:10px}
-p.lead{max-width:780px;margin:0 auto 34px;text-align:center;font-size:17px}
-.boxes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.box{background:#fff;padding:24px 26px;border:7px solid var(--copper)}
-.box.navy{border-color:var(--navy)}
-.box h3{color:var(--teal);font-size:24px;margin-bottom:10px}
-.box p{margin:0 0 10px;font-size:15px}
+/* 2. the square cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{aspect-ratio:1/1;text-align:left;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;border-radius:20px;border:1px solid;padding:18px;
+  box-shadow:0 4px 20px rgba(0,0,0,.45);transition:transform .15s,box-shadow .15s,border-color .15s}
+.card:hover{transform:scale(1.03);box-shadow:0 8px 28px rgba(0,0,0,.6)}
+.card:active{transform:scale(.98)}
+.card .ic{font-size:36px;line-height:1;filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+.card .t{font-size:18px;font-weight:600;color:#fafafa;line-height:1.25}
+.card .l{font-size:13px;color:rgba(212,212,216,.85);line-height:1.35;margin-top:6px}
+.sky{background:linear-gradient(135deg,rgba(12,74,110,.7),rgba(8,47,73,.4));border-color:rgba(3,105,161,.6)} .sky:hover{border-color:#38bdf8}
+.rose{background:linear-gradient(135deg,rgba(136,19,55,.7),rgba(76,5,25,.4));border-color:rgba(190,18,60,.6)} .rose:hover{border-color:#fb7185}
+.amber{background:linear-gradient(135deg,rgba(120,53,15,.7),rgba(69,26,3,.4));border-color:rgba(180,83,9,.6)} .amber:hover{border-color:#fbbf24}
+.emerald{background:linear-gradient(135deg,rgba(6,78,59,.7),rgba(2,44,34,.4));border-color:rgba(4,120,87,.6)} .emerald:hover{border-color:#34d399}
+.violet{background:linear-gradient(135deg,rgba(76,29,149,.7),rgba(46,16,101,.4));border-color:rgba(109,40,217,.6)} .violet:hover{border-color:#a78bfa}
+.indigo{background:linear-gradient(135deg,rgba(49,46,129,.7),rgba(30,27,75,.4));border-color:rgba(67,56,202,.4)} .indigo:hover{border-color:#818cf8}
+.teal{background:linear-gradient(135deg,rgba(19,78,74,.7),rgba(4,47,46,.4));border-color:rgba(15,118,110,.6)} .teal:hover{border-color:#2dd4bf}
+.fuchsia{background:linear-gradient(135deg,rgba(112,26,117,.7),rgba(74,4,78,.4));border-color:rgba(162,28,175,.6)} .fuchsia:hover{border-color:#e879f9}
 
-/* price */
-.pricebox{max-width:820px;margin:0 auto;background:#fff;border:7px solid var(--navy);padding:34px 34px 28px;text-align:center}
-.pricebox .tag{font-family:Sanchez,Georgia,serif;color:var(--copper);letter-spacing:.08em;font-size:15px}
-.pricebox .amount{font-family:Sanchez,Georgia,serif;color:var(--navy);font-size:64px;line-height:1;margin:12px 0 4px}
-.pricebox .amount small{font-size:22px;color:var(--sage-dk)}
-.pricebox .unl{font-family:Sanchez,Georgia,serif;font-size:24px;color:var(--sage);margin-bottom:16px}
-.pricebox p{text-align:left;font-size:15.5px}
-table.money{width:100%;border-collapse:collapse;margin-top:28px;font-size:14.5px;background:#fff}
-table.money th{background:var(--copper);color:#fff;text-align:left;padding:10px 12px;font-family:Sanchez,Georgia,serif;font-weight:400}
-table.money td{border-bottom:1px solid var(--line);padding:10px 12px;vertical-align:top}
-table.money td.num{white-space:nowrap;font-weight:700;color:var(--navy)}
-.tablewrap{overflow-x:auto}
-.fine{font-size:13.5px;color:#555;margin-top:12px}
+/* 3. one open card */
+.panel{border-radius:20px;background:linear-gradient(135deg,var(--bg2),var(--bg));border:1px solid var(--line);padding:20px;box-shadow:0 0 24px rgba(0,0,0,.5)}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.panel-head h2{margin:0;font-size:22px;font-weight:600}
+.panel p{color:var(--soft);margin:0 0 12px}
+.panel p.big{font-size:18px;color:var(--ink)}
+.amount{font-size:56px;font-weight:800;line-height:1;margin:6px 0 2px;color:#fff}
+.amount small{font-size:18px;font-weight:500;color:var(--mute)}
+.unl{font-size:20px;color:#6ee7b7;margin-bottom:14px}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.tile{border-radius:16px;border-width:1px;border-style:solid;padding:14px}
+.tile .k{font-size:13px;color:var(--soft)}
+.tile .v{font-size:24px;font-weight:700;margin-top:4px}
+.tile .s{font-size:12.5px;color:var(--mute);margin-top:4px}
+.list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.item{border-radius:16px;border:1px solid var(--line);background:rgba(24,24,27,.8);padding:14px}
+.item b{display:block;color:#fafafa;margin-bottom:4px}
+.item span{font-size:14px;color:var(--soft)}
+.note{font-size:13px;line-height:1.4;border-radius:12px;padding:9px 12px;background:rgba(8,47,73,.45);color:#e0f2fe;margin-top:10px}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+form label{display:block;font-size:13px;color:var(--mute);margin:0 0 4px 6px}
+textarea.field{min-height:90px;resize:vertical}
+select.field{appearance:none}
 
-/* value grid */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border-top:6px solid var(--teal);padding:20px 20px 16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.card:nth-child(3n+2){border-top-color:var(--copper)}
-.card:nth-child(3n){border-top-color:var(--navy)}
-.card h3{font-size:19px;color:var(--navy);margin-bottom:8px}
-.card p{margin:0;font-size:14.5px}
-.also{margin-top:26px;background:#fff;border-left:7px solid var(--sage);padding:18px 22px;font-size:14.5px}
+/* 4. the log */
+.log{margin-top:18px;border-radius:18px;border:1px solid #27272a;background:rgba(9,9,11,.6);padding:12px}
+.log .h{font-size:14px;color:var(--soft);margin-bottom:6px}
+.log .e{font-size:13px;color:#52525b}
+.log .d{font-size:13px;border-radius:12px;padding:7px 12px;background:rgba(2,44,34,.45);color:#d1fae5;margin-top:6px}
 
-/* thirty days */
-.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.week{background:var(--teal);color:#fff;padding:20px 18px}
-.week h3{color:#2b2b2b;font-size:20px;margin-bottom:8px}
-.week p{margin:0;font-size:14.5px}
+footer{margin-top:28px;text-align:center;color:var(--dim);font-size:13px}
+footer a{color:#c4b5fd}
+.hidden{display:none}
 
-/* close + footer */
-.close{background:var(--maroon);color:#fff;text-align:center;padding:60px 0}
-.close h2{font-size:34px;max-width:860px;margin:0 auto 14px}
-.close p{max-width:760px;margin:0 auto 24px;color:#e8dfda;font-size:17px}
-footer{background:#241411;color:#bfb3ad;font-size:13px;padding:22px 0;text-align:center}
-footer a{color:#d9cfc9}
-
-@media (max-width:900px){
-  .hero .wrap{grid-template-columns:1fr;padding:46px 20px 70px;gap:34px}
-  .hero h1{font-size:36px}
-  .steps,.grid{grid-template-columns:1fr}
-  .weeks{grid-template-columns:1fr 1fr}
-  .boxes{grid-template-columns:1fr}
-  header.brand .wrap{flex-direction:column;align-items:flex-start}
-  .cta-r{text-align:left}
-  .logo .name{font-size:22px}
-  h2.sec{font-size:30px}
-  .dark h2.center{font-size:28px}
-  .pricebox{padding:24px 18px}
-  .pricebox .amount{font-size:48px}
+@media (max-width:860px){ .cards{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:640px){
+  .cards{grid-template-columns:repeat(2,1fr);gap:12px}
+  .card{padding:14px} .card .ic{font-size:30px} .card .t{font-size:16px} .card .l{font-size:12px}
+  .bubble h1{font-size:21px}
+  .mini,.list,form .row{grid-template-columns:1fr}
+  .amount{font-size:44px}
+  .top{flex-direction:column;align-items:flex-start}
+  .line{flex-direction:column} .line .green{width:100%}
 }
-@media (max-width:520px){ .weeks{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<div class="topbar"><div class="wrap"><a class="pill" href="#waitlist">Join the Waitlist</a></div></div>
-
-<header class="brand"><div class="wrap">
-  <a class="logo" href="#top" aria-label="Rugged Technology home">
-    <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true">
-      <circle cx="27" cy="27" r="25" fill="none" stroke="#2f4968" stroke-width="2.5"/>
-      <circle cx="27" cy="27" r="20" fill="none" stroke="#858f7b" stroke-width="1.5" stroke-dasharray="2 2.5"/>
-      <path d="M12 36 L21 22 L27 30 L32 24 L42 36 Z" fill="#2f4968"/>
-      <rect x="17" y="38" width="20" height="3" fill="#a36645"/>
-    </svg>
-    <span class="name">Rugged Technology</span>
-  </a>
-  <div class="cta-r">
-    <div class="big">$499 a seat a month</div>
-    <div class="small">Unlimited everything. Published, no call required.</div>
+  <div class="top">
+    <div class="mark"><div class="sq">RT</div><div class="nm">Rugged Technology<small>Built by a lawyer, for lawyers</small></div></div>
+    <div class="price-chip"><b>$499</b> a seat a month · unlimited everything</div>
   </div>
-</div></header>
 
-<nav class="bar"><div class="wrap">
-  <a href="#top">Home</a><a href="#price">The Price</a><a href="#money">The Money Case</a><a href="#value">What a Seat Includes</a><a href="#thirty">Your First 30 Days</a><a href="#waitlist">Join the Waitlist</a>
-</div></nav>
-
-<main id="top">
-<section class="hero"><div class="wrap">
-  <div>
-    <h1><span class="tone">Your firm does not live in the cloud.</span>It lives on hardware you control.</h1>
-    <div class="rule"></div>
-    <p class="sub">Every matter, every document, every call stays on a private machine, yours or one we house for you alone. Privilege first, by construction.</p>
-    <p class="sub">How would it feel to drop overpriced vendors and replace them with superior technology and functionality, designed by a lawyer and built specifically for lawyers?</p>
-    <p class="proof">You ask for it. It lands on your desk and opens in Word.</p>
+  <div class="helper">
+    <div class="avatar" title="Petie">🐾</div>
+    <div class="bubble">
+      <h1>Your firm does not live in the cloud. It lives on hardware you control.</h1>
+      <p>Every matter, every document, every call stays on a private machine, yours or one we house for you alone. Privilege first, by construction. Pick a square, or tell me what you want to know.</p>
+      <p class="proof">You ask for it. It lands on your desk and opens in Word.</p>
+    </div>
   </div>
-  <div class="formbox" id="waitlist">
-    <h2>Join the Waitlist</h2>
-    <p class="note">Tell us about your firm. A named person at Rugged Technology will contact you.</p>
-    <form id="wl" novalidate>
-      <label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required>
-      <label for="f-firm">Firm</label><input id="f-firm" name="firm" autocomplete="organization">
-      <label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required>
-      <label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel">
-      <label for="f-size">People at your firm who would sign in</label>
-      <select id="f-size" name="size"><option>1</option><option>2 to 4</option><option>5 to 9</option><option>10 to 19</option><option>20 or more</option></select>
-      <label for="f-msg">Anything you want us to know</label><textarea id="f-msg" name="message"></textarea>
-      <button class="btn" type="submit">Join the Waitlist</button>
-    </form>
+
+  <div class="line">
+    <input id="ask" class="field" placeholder="Ask in your own words, like “what does it cost” or “how do we switch”">
+    <button id="askBtn" class="green">Show me</button>
   </div>
-</div></section>
-<div class="torn"></div>
 
-<section class="dark"><div class="wrap">
-  <h2 class="center">Built inside a working law firm.</h2>
-  <p style="text-align:center;max-width:820px;margin:0 auto 30px;color:#e8dfda">Rugged Technology's legal build runs intake, drafting, discovery, exhibits, deadlines, phones, and billing on your own matters, with a lawyer's hand on every send. Every claim on this page comes from a real filing. Ask us for one.</p>
-  <div class="steps">
-    <div class="step"><h3>Step 1:</h3><p>Join the waitlist</p></div>
-    <div class="step"><h3>Step 2:</h3><p>We move your firm in, with a named person on the phone</p></div>
-    <div class="step"><h3>Step 3:</h3><p>Your lawyers run real matters in the first thirty days</p></div>
+  <div id="home">
+    <div class="cards" id="cards"></div>
   </div>
-</div></section>
-<div class="rope"></div>
 
-<section class="light" id="price"><div class="wrap">
-  <h2 class="sec">The Price, Published</h2>
-  <p class="lead">No call required.</p>
-  <div class="pricebox">
-    <div class="tag">ONE SEAT · EVERY PERSON WHO SIGNS IN</div>
-    <div class="amount">$499 <small>a seat a month</small></div>
-    <div class="unl">Unlimited everything.</div>
-    <p>Every person at your firm who signs in is a seat. The seat includes the frontier AI models, every desk and room, the law library, the phones, e-signatures, the discovery engine, IT maintenance, updates and support. No tier above it, no usage meter, no add-on, no upsell. Month to month.</p>
-    <p><strong>Two lawyers and three staff: $2,495 a month.</strong> Own your hardware for $25,000 one time, or we house a private machine for your firm alone inside the seat price.</p>
+  <div id="open" class="hidden"></div>
+
+  <div class="log"><div class="h">📜 What Petie did</div><div id="log"><div class="e">Nothing yet. Press a square and it opens here.</div></div></div>
+
+  <footer>© <span id="yr">2026</span> Rugged Technology · Portland, Oregon · <a href="mailto:caroline@ruggedlaw.com">caroline@ruggedlaw.com</a></footer>
+</div>
+
+<template id="t-price">
+  <div class="amount">$499 <small>a seat a month</small></div>
+  <div class="unl">Unlimited everything. Published, no call required.</div>
+  <p>Every person at your firm who signs in is a seat. The seat includes the frontier AI models, every desk and room, the law library, the phones, e-signatures, the discovery engine, IT maintenance, updates and support.</p>
+  <p>No tier above it, no usage meter, no add-on, no upsell. Month to month.</p>
+  <div class="mini">
+    <div class="tile emerald"><div class="k">Two lawyers and three staff</div><div class="v">$2,495</div><div class="s">a month</div></div>
+    <div class="tile sky"><div class="k">Own your hardware</div><div class="v">$25,000</div><div class="s">one time, plus the seats</div></div>
+    <div class="tile violet"><div class="k">Or we house it</div><div class="v">Included</div><div class="s">a private machine for your firm alone, inside the seat price</div></div>
   </div>
-</div></section>
+</template>
 
-<section class="light tint" id="money"><div class="wrap">
-  <h2 class="sec">The Money Case</h2>
-  <p class="lead">You already pay for this, in pieces, to six vendors who do not talk to each other. One seat replaces the pieces, and the pieces never did what the seat does.</p>
-  <div class="tablewrap"><table class="money">
-    <thead><tr><th>Your firm</th><th>What the pieces cost today, per month</th><th>One seat each</th><th>What the seat does that the pieces never did</th></tr></thead>
-    <tbody>
-      <tr><td>Solo lawyer</td><td class="num">$300 to $530</td><td class="num">$499</td><td>Drafts in your wrapper, two desks reading your mail, deadlines found and confirmed, discovery produced, a closed library, phones on the matter</td></tr>
-      <tr><td>3 lawyers + 2 staff</td><td class="num">$1,500 to $2,650</td><td class="num">$2,495</td><td>The same for every seat, and the desks share one record: one matter, one timeline, one calendar, one trust ledger</td></tr>
-      <tr><td>8-person firm</td><td class="num">$2,400 to $4,240</td><td class="num">$3,992</td><td>The same, plus bulk drafting across matters, the conference room on every case, and alerts routed to the team on each matter</td></tr>
-    </tbody>
-  </table></div>
-  <p class="fine">What the pieces are, per person per month, what firms pay today: practice management $50 to $150; AI drafting $150 to $250; Adobe Acrobat Pro about $23; phone system $30 to $40; Dropbox $15 to $25; DocuSign $25 to $45. We port your numbers.</p>
-  <div class="boxes" style="margin-top:26px">
-    <div class="box"><h3>What the others charge</h3><p>The most advanced legal AI is sold by invitation, quoted on a call, with twenty-seat minimums and contracts reported at $50,000 to $300,000 a year. A five-lawyer firm cannot buy it.</p><p><strong>We publish our price.</strong></p></div>
-    <div class="box navy"><h3>What you are buying</h3><p>Not a cheaper set of pieces. A seat that does what the pieces never did: your own wrapper, two desks on every email, deadlines confirmed by a person, discovery produced, and a closed universe of law, on hardware you control.</p></div>
+<template id="t-cloud">
+  <p class="big">Every matter, every document, every call stays on a private machine, yours or one we house for you alone.</p>
+  <p>Your firm's files are not stored on someone else's cloud. The build runs on a machine you own, or one we keep for your firm alone. Privilege first, by construction.</p>
+  <p>Rugged Technology's legal build runs intake, drafting, discovery, exhibits, deadlines, phones, and billing on your own matters, with a lawyer's hand on every send. It was built inside a working law firm. Every claim on this page comes from a real filing. Ask us for one.</p>
+</template>
+
+<template id="t-money">
+  <p class="big">You already pay for this, in pieces, to six vendors who do not talk to each other. One seat replaces the pieces, and the pieces never did what the seat does.</p>
+  <div class="mini">
+    <div class="tile sky"><div class="k">Solo lawyer</div><div class="v">$499</div><div class="s">the pieces today: $300 to $530 a month</div></div>
+    <div class="tile teal"><div class="k">3 lawyers + 2 staff</div><div class="v">$2,495</div><div class="s">the pieces today: $1,500 to $2,650 a month</div></div>
+    <div class="tile indigo"><div class="k">8-person firm</div><div class="v">$3,992</div><div class="s">the pieces today: $2,400 to $4,240 a month</div></div>
   </div>
-</div></section>
+  <p>The pieces, per person per month: practice management $50 to $150; AI drafting $150 to $250; Adobe Acrobat Pro about $23; phone system $30 to $40; Dropbox $15 to $25; DocuSign $25 to $45. We port your numbers.</p>
+  <div class="note">The most advanced legal AI is sold by invitation, quoted on a call, with twenty-seat minimums and contracts reported at $50,000 to $300,000 a year. A five-lawyer firm cannot buy it. We publish our price.</div>
+</template>
 
-<section class="light" id="value"><div class="wrap">
-  <h2 class="sec">What One Seat Includes</h2>
-  <p class="lead">Each line below runs today inside a working firm.</p>
-  <div class="grid">
-    <div class="card"><h3>Your own wrapper</h3><p>Your pleadings come out in your firm's own wrapper. Caption, format, headers, signature block, matched to your existing filings during onboarding. Not an AI drafter. Your lawyers review, sign, and file.</p></div>
-    <div class="card"><h3>Every email, read twice</h3><p>Every incoming email is read within minutes by two desks: one routes it to the matter and drafts the reply, the other hunts it for deadlines and court dates. Nothing is sent and nothing is calendared without a person confirming.</p></div>
-    <div class="card"><h3>Deadlines, desk by desk</h3><p>Every deadline is found in the mail and the record, computed from the governing rule with the earlier date always shown, confirmed by a person, and watched by a desk that wakes whoever owns it.</p></div>
-    <div class="card"><h3>Urgent, your way</h3><p>An urgent email reaches the people on that matter, each the way they asked to be reached: Teams, email, or the build's own alert chat.</p></div>
-    <div class="card"><h3>Ask the record</h3><p>One desk keeps the record: every matter, every folder, every document on the firm's drive. Ask it what the file holds, what is missing, and what should be filed next, and it answers from the documents, not from memory.</p></div>
-    <div class="card"><h3>The discovery engine</h3><p>The discovery engine alone pays for the build. It takes a folder and the requests and hands your staff a redacted, privilege-gated set to adopt. What you receive is read page by page against your requests: what is missing, what contradicts the record, what admits something. You decide.</p></div>
-    <div class="card"><h3>A closed universe of law</h3><p>Law from official sources, growing nightly without a cap, so your agents draft from what is on the shelf, never the open internet. Every opinion of the Supreme Court of the United States, from 1759 to the current term, kept current every night.</p></div>
-    <div class="card"><h3>Expert witnesses</h3><p>The build searches published opinions, the firm's own record, and the open web for experts in the field you name, with the rulings that admitted or excluded their testimony, and a memo for the lawyer. The lawyer vets every name.</p></div>
-    <div class="card"><h3>Workflows built around your firm</h3><p>Ninety-nine workflows today, from intake to appeal, tuned to your own filings during onboarding and corrected by your lawyers, not ours. The paper gets done. You keep the strategy.</p></div>
-    <div class="card"><h3>Whole folders, whole dockets</h3><p>Drop in a whole folder. Hundreds of documents land in the matter, read, OCR'd, and filed where they belong. Drop in the docket: every filing lands in order, every date is offered to the calendar for a person to confirm.</p></div>
-    <div class="card"><h3>New filings as they happen</h3><p>New filings are captured as the court sends them. The notice lands in the matter within minutes, the dates are pulled, and the team on the matter is told.</p></div>
-    <div class="card"><h3>The conference room</h3><p>Sit down with the desks on a case: senior counsel, head counsel, the scrub, the librarian, the record keeper, each able to ask the others. What they offer is a suggestion. The attorney of record always has the final word.</p></div>
-    <div class="card"><h3>Drafts that land, authority that is checked</h3><p>The draft lands on the desk that asked for it, open in Word. Every authority in it is checked by a second mind against the library, and anything it cannot verify is marked for a person. No citation goes out on an agent's word.</p></div>
-    <div class="card"><h3>Bulk drafting</h3><p>List the matters, say what each one needs, press once. Every draft files to its own matter and lands for review, with a Jobs line showing where each is.</p></div>
-    <div class="card"><h3>Your phones, inside the build</h3><p>Every call is captured on the matter, so the finer points of a client's words are never lost. With the client's permission, the conversation is transcribed and read by the desks.</p></div>
+<template id="t-seat">
+  <p>Each square below runs today inside a working firm.</p>
+  <div class="list">
+    <div class="item"><b>✍️ Your own wrapper</b><span>Your pleadings come out in your firm's own caption, format, headers and signature block. Your lawyers review, sign, and file.</span></div>
+    <div class="item"><b>📬 Every email, read twice</b><span>One desk routes it to the matter and drafts the reply; the other hunts it for deadlines. Nothing is sent or calendared without a person confirming.</span></div>
+    <div class="item"><b>⏰ Deadlines, desk by desk</b><span>Found in the mail and the record, computed from the governing rule with the earlier date shown, confirmed by a person.</span></div>
+    <div class="item"><b>🗂️ Ask the record</b><span>Ask what the file holds, what is missing, and what to file next. It answers from the documents, not from memory.</span></div>
+    <div class="item"><b>📚 A closed universe of law</b><span>Law from official sources, growing nightly, so drafts come from what is on the shelf, never the open internet.</span></div>
+    <div class="item"><b>✅ Authority that is checked</b><span>Every citation in a draft is checked by a second mind against the library. Anything it cannot verify is marked for a person.</span></div>
+    <div class="item"><b>📞 Your phones, inside the build</b><span>Every call is captured on the matter. With the client's permission, it is transcribed for the desks.</span></div>
+    <div class="item"><b>🧑‍⚖️ The conference room</b><span>Sit down with the desks on a case. What they offer is a suggestion; the attorney of record always has the final word.</span></div>
+    <div class="item"><b>📦 Whole folders, whole dockets</b><span>Drop in a folder or a docket. Hundreds of documents are read, OCR'd and filed to the matter, and dates are offered to the calendar.</span></div>
+    <div class="item"><b>🔔 New filings as they happen</b><span>The court's notice lands in the matter within minutes, and the team on the matter is told.</span></div>
   </div>
-  <div class="also"><strong>Also inside:</strong> exhibit sets with surgical excerpts, privilege checks, and a number on every page; a trial notebook; a client portal and share links with no login and no Dropbox; engagement letters and declarations by wizard; Word inside the build; security and audit desks; prebills, deposits applied to the right matter, and a trust ledger that ties out, handled by people; Teams and Office 365 where your staff already live.</div>
-</div></section>
-<div class="rope"></div>
+  <div class="note">Also inside: exhibit sets with a number on every page, a trial notebook, a client portal with no login, engagement letters by wizard, Word inside the build, security and audit desks, a trust ledger that ties out, handled by people, and Teams and Office 365 where your staff already live.</div>
+</template>
 
-<section class="light tint" id="thirty"><div class="wrap">
-  <h2 class="sec">Your First Thirty Days</h2>
-  <p class="lead">We move you in. Switching is the part every firm dreads, so it is the part we do with you, step by step, with a named person on the phone.</p>
-  <div class="weeks">
-    <div class="week"><h3>Week one: your files come over</h3><p>Your practice-management exports and your firm drive come across. Every document is read and filed to its matter. We build your drafting profile from about ten of your best filings.</p></div>
-    <div class="week"><h3>Week two: your numbers and your desks</h3><p>Your phone numbers are ported (not same day; we say so). Finished work opens on the desk that asked for it. Teams and Office 365 are connected. If you bought your own hardware, we set it up on site.</p></div>
-    <div class="week"><h3>Week three: the first real drafts</h3><p>Your lawyers run real matters. Every draft comes back Done or Wrong, and the build learns your corrections, not ours.</p></div>
-    <div class="week"><h3>Week four: the guarantee</h3><p>If the build has not drafted and calendared a real matter for you in the first thirty days, that month is free.</p></div>
+<template id="t-discovery">
+  <p class="big">The discovery engine alone pays for the build.</p>
+  <p>It takes a folder and the requests and hands your staff a redacted, privilege-gated set to adopt. Your staff review it, and your lawyers decide what goes out.</p>
+  <p>Discovery works both directions. What you receive is read page by page against your requests: what is missing, what contradicts the record, what admits something. The desks tell you, and you decide.</p>
+</template>
+
+<template id="t-thirty">
+  <p class="big">We move you in. Switching is the part every firm dreads, so it is the part we do with you, step by step, with a named person on the phone.</p>
+  <div class="list">
+    <div class="item"><b>Week one · your files come over</b><span>Your practice-management exports and your firm drive come across. Every document is read and filed to its matter. Your drafting profile is built from about ten of your best filings.</span></div>
+    <div class="item"><b>Week two · your numbers and your desks</b><span>Your phone numbers are ported (not same day; we say so). Finished work opens on the desk that asked for it. Teams and Office 365 are connected.</span></div>
+    <div class="item"><b>Week three · the first real drafts</b><span>Your lawyers run real matters. Every draft comes back Done or Wrong, and the build learns your corrections, not ours.</span></div>
+    <div class="item"><b>Week four · the guarantee</b><span>If the build has not drafted and calendared a real matter for you in the first thirty days, that month is free.</span></div>
   </div>
-  <p class="lead" style="margin-top:30px;margin-bottom:0">A named person at Rugged Technology answers the phone through your first thirty days and after.</p>
-</div></section>
+  <div class="note">A named person at Rugged Technology answers the phone through your first thirty days and after.</div>
+</template>
 
-<section class="close"><div class="wrap">
-  <h2>Undergird your staff with systems that bring out the best in them.</h2>
-  <p>Give yourself the best chance to succeed. Your clients deserve every advantage you can give them when they entrust you with their matter.</p>
-  <a class="btn" href="#waitlist">Join the Waitlist</a>
-</div></section>
-</main>
+<template id="t-why">
+  <p class="big">How would it feel to drop overpriced vendors and replace them with superior technology and functionality, designed by a lawyer and built specifically for lawyers?</p>
+  <p>Undergird your staff with systems that bring out the best in them. Give yourself the best chance to succeed. Your clients deserve every advantage you can give them when they entrust you with their matter.</p>
+</template>
 
-<footer><div class="wrap">© <span id="yr">2026</span> Rugged Technology · Portland, Oregon · <a href="mailto:caroline@ruggedlaw.com">caroline@ruggedlaw.com</a></div></footer>
+<template id="t-waitlist">
+  <p>Tell us about your firm. A named person at Rugged Technology will contact you.</p>
+  <form id="wl" novalidate>
+    <div class="row">
+      <div><label for="f-name">Your name</label><input id="f-name" class="field" name="name" autocomplete="name"></div>
+      <div><label for="f-firm">Firm</label><input id="f-firm" class="field" name="firm" autocomplete="organization"></div>
+    </div>
+    <div class="row">
+      <div><label for="f-email">Email</label><input id="f-email" class="field" name="email" type="email" autocomplete="email"></div>
+      <div><label for="f-phone">Phone</label><input id="f-phone" class="field" name="phone" type="tel" autocomplete="tel"></div>
+    </div>
+    <div class="row">
+      <div><label for="f-size">People who would sign in</label>
+        <select id="f-size" class="field" name="size"><option>1</option><option>2 to 4</option><option>5 to 9</option><option>10 to 19</option><option>20 or more</option></select></div>
+      <div><label for="f-want">I would like</label>
+        <select id="f-want" class="field" name="want"><option>To join the waitlist</option><option>A demonstration</option><option>A call about pricing</option></select></div>
+    </div>
+    <label for="f-msg">Anything you want us to know</label>
+    <textarea id="f-msg" class="field" name="message"></textarea>
+    <div style="margin-top:12px"><button class="green" type="submit">Send it to Rugged Technology</button></div>
+  </form>
+</template>
 
 <script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-document.getElementById('wl').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var f = e.target, v = function (n) { return (f.elements[n].value || '').trim(); };
-  if (!v('name') || !v('email')) { alert('Please add your name and email.'); return; }
-  var body = 'Name: ' + v('name') + '\nFirm: ' + v('firm') + '\nEmail: ' + v('email') + '\nPhone: ' + v('phone') +
-             '\nPeople who would sign in: ' + v('size') + '\n\n' + v('message');
-  window.location.href = 'mailto:caroline@ruggedlaw.com?subject=' + encodeURIComponent('Rugged Technology waitlist - ' + (v('firm') || v('name'))) +
-                         '&body=' + encodeURIComponent(body);
-});
+var CARDS = [
+  {k:'price',     ic:'💵', tint:'emerald', t:'The price',               l:'$499 a seat a month. Unlimited everything.'},
+  {k:'cloud',     ic:'🔒', tint:'violet',  t:'Off the cloud',           l:'Your files live on a machine you control.'},
+  {k:'money',     ic:'🧮', tint:'amber',   t:'The money case',          l:'What you pay for in pieces today, side by side.'},
+  {k:'seat',      ic:'🧰', tint:'sky',     t:'What one seat includes',  l:'Every desk and room, in plain words.'},
+  {k:'discovery', ic:'🔍', tint:'rose',    t:'The discovery engine',    l:'A folder and the requests in; a set to adopt out.'},
+  {k:'thirty',    ic:'🚚', tint:'teal',    t:'Your first 30 days',      l:'We move you in, week by week.'},
+  {k:'why',       ic:'⚖️', tint:'indigo',  t:'Why we built it',         l:'Designed by a lawyer, for lawyers.'},
+  {k:'waitlist',  ic:'✨', tint:'fuchsia', t:'Join the waitlist',       l:'Or ask for a demonstration.'}
+];
+var WORDS = [
+  [/price|cost|pay|\$|seat|month|cheap|expens/i, 'price'], [/cloud|private|secure|privileg|own (the )?hardware|server|machine/i, 'cloud'],
+  [/money|vendor|clio|dropbox|docusign|adobe|compare|save|piece/i, 'money'], [/discover|produc|redact|request|bates/i, 'discovery'],
+  [/switch|move|onboard|start|30|thirty|week|migrat|port/i, 'thirty'], [/wait|sign up|join|demo|contact|call|talk/i, 'waitlist'],
+  [/why|who|lawyer|built|story/i, 'why'], [/include|feature|do|desk|email|deadline|draft|phone|record|law/i, 'seat']
+];
+function el(id){return document.getElementById(id);}
+function log(text){var L=el('log'); if(L.firstElementChild && L.firstElementChild.className==='e') L.innerHTML=''; var d=document.createElement('div'); d.className='d'; d.textContent='✨ Done. '+text; L.prepend(d); while(L.children.length>4) L.lastChild.remove();}
+function home(){el('open').classList.add('hidden'); el('home').classList.remove('hidden'); window.scrollTo({top:0,behavior:'smooth'});}
+function openCard(k){
+  var c = CARDS.filter(function(x){return x.k===k;})[0]; if(!c) return;
+  var o = el('open'); o.innerHTML='';
+  var p = document.createElement('div'); p.className='panel';
+  p.innerHTML = '<div class="panel-head"><h2>'+c.ic+' '+c.t+'</h2><button class="quiet" type="button">← Back</button></div>';
+  p.querySelector('.quiet').onclick = home;
+  p.appendChild(el('t-'+k).content.cloneNode(true));
+  if(k!=='waitlist'){ var b=document.createElement('div'); b.style.marginTop='14px'; b.innerHTML='<button class="green" type="button">Join the waitlist</button>'; b.firstChild.onclick=function(){openCard('waitlist');}; p.appendChild(b); }
+  o.appendChild(p); el('home').classList.add('hidden'); o.classList.remove('hidden');
+  if(k==='waitlist') wire();
+  log('Opened “'+c.t+'”.'); window.scrollTo({top:0,behavior:'smooth'});
+}
+function wire(){
+  var f = el('wl'); if(!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault(); var v=function(n){return (f.elements[n].value||'').trim();};
+    if(!v('name') || !v('email')){ log('Add your name and email, then press the green button again.'); return; }
+    var body='Name: '+v('name')+'\nFirm: '+v('firm')+'\nEmail: '+v('email')+'\nPhone: '+v('phone')+'\nPeople who would sign in: '+v('size')+'\nI would like: '+v('want')+'\n\n'+v('message');
+    window.location.href='mailto:caroline@ruggedlaw.com?subject='+encodeURIComponent('Rugged Technology - '+v('want')+' - '+(v('firm')||v('name')))+'&body='+encodeURIComponent(body);
+    log('Your note is ready in your email app. Press send there and we will reach out.');
+  });
+}
+(function(){
+  var g = el('cards');
+  CARDS.forEach(function(c){
+    var b=document.createElement('button'); b.type='button'; b.className='card '+c.tint;
+    b.innerHTML='<div class="ic">'+c.ic+'</div><div><div class="t">'+c.t+'</div><div class="l">'+c.l+'</div></div>';
+    b.onclick=function(){openCard(c.k);}; g.appendChild(b);
+  });
+  function ask(){ var q=el('ask').value.trim(); if(!q) return; for(var i=0;i<WORDS.length;i++){ if(WORDS[i][0].test(q)){ openCard(WORDS[i][1]); el('ask').value=''; return; } } openCard('seat'); el('ask').value=''; }
+  el('askBtn').onclick=ask; el('ask').addEventListener('keydown',function(e){if(e.key==='Enter') ask();});
+  el('yr').textContent=new Date().getFullYear();
+})();
 </script>
 </body>
 </html>
